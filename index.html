@@ -30,38 +30,50 @@
             --border: #d4d9d2;
         }
 
-        /* HEADER (TRANSLUCENT) */
+        /* ⭐ IMPROVED HEADER STYLE */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            height: 90px;
-            background: rgba(47, 95, 59, 0.75);
+            height: 95px;
+            background: rgba(47, 95, 59, 0.82);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            font-weight: bold;
+            padding: 0 20px;
+            font-size: 38px;
+            font-weight: 800;
             z-index: 1000;
             letter-spacing: 1px;
             backdrop-filter: blur(6px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
         }
 
         .logo {
             position: absolute;
-            left: 25px;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .logo img {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
         /* SUBHEADER */
         .subheader {
             position: fixed;
-            top: 90px;
+            top: 95px;
             width: 100%;
             text-align: center;
             background: var(--primary-light);
@@ -76,7 +88,7 @@
             width: 92%;
             max-width: 1100px;
             margin: auto;
-            padding-top: 170px;
+            padding-top: 175px;
         }
 
         /* TITLES */
@@ -204,23 +216,33 @@
             text-decoration: none;
         }
 
-        /* ⭐ FIX: Prevent logo from covering header on small screens */
+        /* ⭐ MOBILE FIX FOR LOGO + TITLE */
         @media (max-width: 480px) {
-            .logo img {
-                width: 45px;
-                height: 45px;
+            header {
+                height: 80px;
+                font-size: 24px;
             }
 
-            header {
-                font-size: 26px;
+            .logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                letter-spacing: 0.5px;
             }
 
             .subheader {
+                top: 80px;
                 font-size: 16px;
-                padding: 10px 5px;
+                padding: 8px 5px;
+            }
+
+            .container {
+                padding-top: 155px;
             }
         }
-
     </style>
 </head>
 
@@ -231,136 +253,5 @@
     <div class="logo">
         <img src="logo.jfif" alt="Farm Logo">
     </div>
-   <h1> DELAMERE DAIRY FARM</h1>
+    <h1>DELAMERE DAIRY FARM</h1>
 </header>
-
-<!-- SUBHEADER -->
-<div class="subheader">
-    Premium livestock for farmers nationwide — quality calves, goats, rams & dairy cows.
-</div>
-
-<!-- MAIN CONTENT -->
-<div class="container">
-
-    <!-- SECTION 1 -->
-    <div class="section">
-        <h2>Welcome to Delamere Dairy Farm</h2>
-        <p>
-            We specialize in supplying strong, healthy, and high-yield livestock including dairy calves, 
-            Dorper sheep, rams, goats, and top-grade Fresian cows.  
-            Every animal we sell is bred for superior production, longevity, and reliable performance.
-        </p>
-    </div>
-
-    <!-- OUR SERVICES -->
-    <div class="section">
-        <h2>Our Livestock Categories</h2>
-        <ul>
-            <li>Pure healthy calves (4–7 months old)</li>
-            <li>Registered Dorper lambs</li>
-            <li>Ready-to-serve Dorper rams</li>
-            <li>Second-calving Fresian high-yield dairy cows</li>
-            <li>Dairy goats for breeding</li>
-        </ul>
-    </div>
-
-    <!-- LIVESTOCK GALLERY -->
-    <div class="section">
-        <h2>Livestock Gallery</h2>
-
-        <div class="gallery">
-
-            <div class="gallery-box">
-                <img src="pu1.jfif">
-                <h4>Pure Calves</h4>
-                <div class="price-tag">KSh @25k–@67k <br>4 to 7 months</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="rigisterd doper.jfif">
-                <h4>Registered Dorper</h4>
-                <div class="price-tag">KSh 6k–10k <br>3 to 5 months</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="second calving.jfif">
-                <h4>Second Calving (Incalf)</h4>
-                <div class="price-tag">KSh 165k–245k <br>7.5 months incalf</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="every farmers dream goat.jfif">
-                <h4>Farmers’ Dream Goat</h4>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="registerd dopper 11.jfif">
-                <h4>Registered Dorper Ram</h4>
-                <div class="price-tag">KSh 10k–50k <br>Ready to serve</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="second calving freshian.jfif">
-                <h4>Fresian High Yielders</h4>
-                <div class="price-tag">KSh 167k–230k <br>Second calving</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="second calving.jfif">
-                <h4>Incalf Heifers</h4>
-                <div class="price-tag">KSh 89k–175k <br>23–29 Ltrs</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="incalf 2.jfif">
-                <h4>Incalf Heifer (3–7.5 months)</h4>
-                <div class="price-tag">KSh 89k–175k <br>23–29 Ltrs</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-            <div class="gallery-box">
-                <img src="incalf 1.jfif">
-                <h4>Incalf Heifer (3–7.5 months)</h4>
-                <div class="price-tag">KSh 89k–175k <br>23–29 Ltrs</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <h2 style="font-size:26px; margin-bottom:10px;">Contact Us</h2>
-
-    <p><i class="bx bx-phone"></i><b>Phone:</b> 0735007665 / 0208355659</p>
-    <p><i class="bx bxl-whatsapp"></i><b>WhatsApp:</b> 0735007665</p>
-    <p><i class="bx bx-envelope"></i><b>Email:</b> delameredairyfarm1@gmail.com</p>
-    <p><i class="bx bx-map"></i><b>Location:</b> Naivasha, Delamere Farm</p>
-
-    <br>
-    <p>© 2025 Delamere Dairy Farm — All Rights Reserved</p>
-</footer>
-
-<!-- CALL BUTTON -->
-<a href="tel:0735007665" class="call-float">
-    <i class="bx bx-phone-call"></i>
-</a>
-
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/254735007665" target="_blank" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
-
-</body>
-</html>
-
-
