@@ -9,34 +9,33 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 
-<style>
 /* GENERAL */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     margin: 0;
-    background: #f3f5f1;
-    color: #2e332d;
+    background: #f9f7f2; /* Warm farm ivory */
+    color: #3a3327; /* Deep natural brown */
     font-size: 22px;
     overflow-x: hidden;
 }
 
 :root {
-    --primary: #2f5f3b;
-    --primary-light: #3f7a4e;
+    --primary: #4b7f3b; /* Fresh farm green */
+    --primary-light: #629d4f; /* Lighter soft green */
     --background-light: #ffffff;
-    --card-bg: #ffffff;
-    --border: #d4d9d2;
+    --card-bg: #fffdf9; /* Light warm beige */
+    --border: #e0d7c8; /* Soft warm border */
 }
 
 /* HEADER */
 header {
     position: sticky;
     top: 0;
-    background: rgba(47, 95, 59, 0.97);
+    background: rgba(75, 127, 59, 0.97); /* Fresh green */
     width: 100%;
     z-index: 1200;
     padding: 12px 0;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
 
     display: flex;
     align-items: center;
@@ -60,23 +59,20 @@ header {
 }
 
 .header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     line-height: 1.1;
 }
 
 .header-text h1 {
     font-size: 34px;
-    color: #fff;
+    color: #ffffff;
+    font-weight: 700;
     margin: 0;
     letter-spacing: 1px;
-    font-weight: 700;
 }
 
 .header-text p {
     margin: 5px 0 0 0;
-    color: #e7ffe7;
+    color: #eefee8;
     font-size: 18px;
 }
 
@@ -86,7 +82,7 @@ header {
     top: 108px;
     width: 100%;
     background: var(--primary-light);
-    color: #fff;
+    color: #fafff5;
     text-align: center;
     padding: 12px 0;
     font-size: 20px;
@@ -106,11 +102,11 @@ h2, h4 {
     font-size: 32px;
     color: var(--primary);
     font-weight: 700;
-    margin-top: 0;
 }
 
 p, li {
     font-size: 21px;
+    color: #463c2e;
     line-height: 1.7;
 }
 
@@ -120,7 +116,7 @@ p, li {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 35px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
 }
 
 /* GALLERY */
@@ -128,23 +124,21 @@ p, li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
-    overflow: hidden;
 }
 
 .gallery-box {
-    background: var(--background-light);
+    background: #fffdf7;
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid var(--border);
+    border: 1px solid #e1d8c9;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
 }
 
-/* ⭐ BIGGER IMAGES ⭐ */
+/* ⭐ LARGE FEATURE IMAGES ⭐ */
 .gallery-box img {
     width: 100%;
-    height: 380px;
+    height: 400px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -153,7 +147,7 @@ p, li {
 .price-tag {
     font-size: 22px;
     font-weight: bold;
-    color: #2f5f3b;
+    color: var(--primary);
     margin: 12px 0;
 }
 
@@ -177,8 +171,9 @@ footer {
     background: var(--primary);
     color: #fff;
     text-align: center;
-    padding: 30px 20px;
+    padding: 35px 20px;
     margin-top: 40px;
+    font-size: 20px;
 }
 
 footer p i {
@@ -210,9 +205,9 @@ footer p i {
 
 .call-float {
     bottom: 110px;
-    background: #2f5f3b;
+    background: var(--primary);
     color: white;
-    font-size: 46px;
+    font-size: 42px;
 }
 
 /* MOBILE OPTIMIZATION */
@@ -222,28 +217,18 @@ footer p i {
     }
 
     .gallery-box img {
-        height: 300px;
+        height: 290px;
     }
 
     .header-text h1 {
-        font-size: 22px;
-    }
-
-    .header-text p {
-        font-size: 14px;
-    }
-
-    .header-logo img {
-        width: 55px;
-        height: 55px;
+        font-size: 24px;
     }
 
     .subheader {
-        font-size: 14px;
-        padding: 8px;
+        font-size: 15px;
+        padding: 10px;
     }
 }
-</style>
 
 </head>
 
@@ -437,6 +422,7 @@ footer p i {
 
 </body>
 </html>
+
 
 
 
